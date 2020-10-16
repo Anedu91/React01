@@ -1,0 +1,11 @@
+.App {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-rows: 10vh 90vh;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 10vh auto;
+}

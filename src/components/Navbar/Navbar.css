@@ -1,0 +1,5 @@
+.navbar {
+  grid-column: 1 / -1;
+  background: hsl(36, 90%, 51%);
+  border-bottom: 1px solid hsla(0, 11%, 65%, 0.671);
+}

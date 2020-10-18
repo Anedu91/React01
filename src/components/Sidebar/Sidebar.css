@@ -1,3 +1,4 @@
 .sidebar {
   background: hsl(36, 90%, 51%);
+  /* grid-column: 1 / 4; */
 }

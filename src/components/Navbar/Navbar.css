@@ -2,4 +2,32 @@
   grid-column: 1 / -1;
   background: hsl(36, 90%, 51%);
   border-bottom: 1px solid hsla(0, 11%, 65%, 0.671);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+}
+.navbar__brand {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.navbar__home {
+  text-decoration: none;
+  color: #000;
+}
+.navbar__nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.navbar__item {
+  margin-left: 1rem;
+}
+.navbar__link {
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }

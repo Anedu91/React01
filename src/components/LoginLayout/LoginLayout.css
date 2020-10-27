@@ -1,0 +1,10 @@
+.login {
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+}
+.login__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

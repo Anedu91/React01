@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import cx from "classnames";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 
@@ -21,16 +22,21 @@ function Tool(props) {
         <p>{props.tool.description}</p>
       </article>
       <nav className="tool__navigation">
-        <a href="#" className="tool__link" onClick={props.onToggleFavorite}>
+        <button
+          href="#"
+          className="tool__link"
+          onClick={props.onToggleFavorite}
+        >
           {props.tool.is_favorite ? <BsHeartFill /> : <BsHeart />}
-        </a>
+        </button>
 
         <a href="#" className="tool__link">
           {props.tool.rating}
         </a>
-        <a href={props.tool.url} className="tool__link">
+
+        <Link to={`/tools/${props.tool.id}`} className="tool__link">
           Go to page
-        </a>
+        </Link>
       </nav>
     </>
   );

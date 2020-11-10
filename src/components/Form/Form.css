@@ -23,7 +23,7 @@
   border: 1px solid black;
 }
 
-button {
+.form button {
   margin-top: 2rem;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -34,7 +34,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.form button:hover {
   background: gray;
   color: black;
 }

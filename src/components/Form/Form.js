@@ -1,22 +1,47 @@
 import React from "react";
+import { useLocation, useHistory } from "react-router-dom";
 
 import "./Form.css";
+
 function Form(props) {
+  const location = useLocation();
+  const history = useHistory();
+
+  const isSignup = location.path === "/signup";
+
   return (
-    <form action="" className="form login__form">
+    <form
+      action=""
+      className="form login__form"
+      onSubmit={() => {
+        history.replace("/");
+        // history.replace("/tools/:id")
+      }}
+    >
       <div className="form__group">
-        <label htmlFor="" className="form__label">
+        <label htmlFor="username" className="form__label">
           UserName
         </label>
-        <input type="text" className="form__input" placeholder="Username" />
+        <input
+          type="text"
+          className="form__input"
+          placeholder="Username"
+          id="username"
+        />
       </div>
       <div className="form__group">
-        <label htmlFor="" className="form__label">
+        <label htmlFor="password" className="form__label">
           Password
         </label>
-        <input type="password" className="form__input" placeholder="Password" />
+        <input
+          type="password"
+          className="form__input"
+          placeholder="Password"
+          id="password"
+        />
       </div>
-      {props.signup ? (
+
+      {isSignup ? (
         <div className="form__group">
           <label htmlFor="" className="form__label">
             Confirm Password
@@ -28,7 +53,8 @@ function Form(props) {
           />
         </div>
       ) : null}
-      <button type="submit">{props.signup ? "Create" : "Login"}</button>
+
+      <button type="submit">{isSignup ? "Create" : "Login"}</button>
     </form>
   );
 }
